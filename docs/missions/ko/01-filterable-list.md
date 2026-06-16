@@ -1,5 +1,7 @@
 # 미션 01: 필터 가능한 목록
 
+공통 요구사항: [common-requirements.md](./common-requirements.md)
+
 ## 목적
 
 controlled input, 파생 목록, 조건부 렌더링, empty state를 연습합니다. 현재

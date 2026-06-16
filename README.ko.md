@@ -42,6 +42,9 @@ Vite가 출력하는 URL을 엽니다. 보통 `http://localhost:5173` 입니다.
 - `packages/missions`: 앱에서 사용하는 영어 기본 미션 문구와 한국어 번역
 - `docs/missions/en`: 영어 상세 미션 요구사항
 - `docs/missions/ko`: 한국어 상세 미션 요구사항
+- `docs/missions/en/common-requirements.md`: 모든 미션에 적용되는 영어 공통
+  요구사항과 dependency 정책
+- `docs/missions/ko/common-requirements.md`: 한국어 공통 요구사항
 - `.agents`: AI 에이전트 평가 지침
 
 앱은 영어를 기본으로 열립니다. 사이드바의 언어 전환 버튼으로 한국어 버전을 볼

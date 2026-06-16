@@ -1,5 +1,7 @@
 # Mission 01: Filterable List
 
+Common requirements: [common-requirements.md](./common-requirements.md)
+
 ## Purpose
 
 Practice controlled inputs, derived lists, conditional rendering, and empty

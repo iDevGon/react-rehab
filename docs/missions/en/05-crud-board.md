@@ -1,5 +1,7 @@
 # Mission 05: CRUD Board
 
+Common requirements: [common-requirements.md](./common-requirements.md)
+
 ## Purpose
 
 Practice local CRUD state: creating, selecting, editing, deleting, and clearing

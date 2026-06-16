@@ -1,5 +1,7 @@
 # 미션 04: API 에러 핸들링
 
+공통 요구사항: [common-requirements.md](./common-requirements.md)
+
 ## 목적
 
 loading, success, failure, retry, stale error clearing 같은 명시적인 비동기

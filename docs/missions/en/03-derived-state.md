@@ -1,5 +1,7 @@
 # Mission 03: Derived State
 
+Common requirements: [common-requirements.md](./common-requirements.md)
+
 ## Purpose
 
 Practice keeping source state minimal and deriving totals from current data.

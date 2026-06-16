@@ -1,5 +1,7 @@
 # Mission 02: Validated Modal Form
 
+Common requirements: [common-requirements.md](./common-requirements.md)
+
 ## Purpose
 
 Practice modal state, controlled form fields, multi-field validation, keyboard

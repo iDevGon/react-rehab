@@ -1,5 +1,7 @@
 # Mission 04: API Error Handling
 
+Common requirements: [common-requirements.md](./common-requirements.md)
+
 ## Purpose
 
 Practice explicit async state management: loading, success, failure, retry, and

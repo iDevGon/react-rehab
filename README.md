@@ -45,6 +45,9 @@ Open the URL printed by Vite, usually `http://localhost:5173`.
   translations used by the app.
 - `docs/missions/en` contains detailed English mission requirements.
 - `docs/missions/ko` contains detailed Korean mission requirements.
+- `docs/missions/en/common-requirements.md` contains English rules shared by
+  every mission, including the dependency policy.
+- `docs/missions/ko/common-requirements.md` contains the Korean version.
 - `.agents` contains the shared evaluator instructions for AI agents.
 
 The app opens in English by default. Use the language switcher in the sidebar to

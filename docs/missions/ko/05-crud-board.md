@@ -1,5 +1,7 @@
 # 미션 05: CRUD 보드
 
+공통 요구사항: [common-requirements.md](./common-requirements.md)
+
 ## 목적
 
 로컬 CRUD 상태를 연습합니다. 생성, 선택, 수정, 삭제, 선택 해제를 다루며 작은

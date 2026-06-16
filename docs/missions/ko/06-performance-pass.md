@@ -1,5 +1,7 @@
 # 미션 06: 성능 개선 패스
 
+공통 요구사항: [common-requirements.md](./common-requirements.md)
+
 ## 목적
 
 사용자에게 보이는 동작은 유지하면서 렌더링 성능을 개선하는 연습을 합니다. 비싼

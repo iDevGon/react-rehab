@@ -1,5 +1,7 @@
 # Mission 06: Performance Pass
 
+Common requirements: [common-requirements.md](./common-requirements.md)
+
 ## Purpose
 
 Practice improving render performance without changing user-facing behavior.

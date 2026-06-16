@@ -1,5 +1,7 @@
 # 미션 02: 검증이 있는 모달 폼
 
+공통 요구사항: [common-requirements.md](./common-requirements.md)
+
 ## 목적
 
 모달 상태, controlled form field, 여러 필드의 validation, 키보드 닫기, 제출

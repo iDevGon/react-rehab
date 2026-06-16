@@ -1,5 +1,7 @@
 # 미션 03: 파생 상태
 
+공통 요구사항: [common-requirements.md](./common-requirements.md)
+
 ## 목적
 
 source state를 최소로 유지하고 현재 데이터에서 합계를 계산하는 연습을 합니다.
