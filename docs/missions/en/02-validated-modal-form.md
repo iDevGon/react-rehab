@@ -8,7 +8,7 @@ opening a dialog, entering data, validating it, and updating a list.
 
 ## Target File
 
-`src/missions/validated-modal-form/Exercise.tsx`
+`apps/web/src/missions/validated-modal-form/Exercise.tsx`
 
 ## What To Build
 
@@ -52,7 +52,7 @@ validation, and submit flow are incomplete.
 ## Test Command
 
 ```bash
-pnpm test -- src/missions/validated-modal-form/Exercise.test.tsx
+pnpm --filter @react-rehab/web test src/missions/validated-modal-form/Exercise.test.tsx
 ```
 
 ## What The Tests Check

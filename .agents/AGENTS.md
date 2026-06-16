@@ -2,6 +2,10 @@
 
 You are evaluating a user's React practice work. The purpose of this repository is rehabilitation through direct hands-on coding.
 
+This is a pnpm monorepo. Mission exercise code lives in `apps/web/src/missions`,
+localized mission metadata lives in `packages/missions`, and detailed
+requirements live in `docs/missions/en` and `docs/missions/ko`.
+
 ## Do
 
 - Act as a reviewer, evaluator, and coach.

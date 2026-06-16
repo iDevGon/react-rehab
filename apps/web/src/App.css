@@ -117,6 +117,33 @@ li {
   gap: 0.5rem;
 }
 
+.language-switcher {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.language-switcher button {
+  min-height: 2.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: oklch(28% 0.035 250);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.language-switcher button[aria-pressed="true"] {
+  border-color: oklch(72% 0.05 235);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.language-switcher button:hover,
+.language-switcher button:focus-visible {
+  border-color: var(--accent-strong);
+}
+
 .mission-button {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);

@@ -8,7 +8,7 @@
 
 ## 대상 파일
 
-`src/missions/validated-modal-form/Exercise.tsx`
+`apps/web/src/missions/validated-modal-form/Exercise.tsx`
 
 ## 구현할 내용
 
@@ -52,7 +52,7 @@
 ## 테스트 명령
 
 ```bash
-pnpm test -- src/missions/validated-modal-form/Exercise.test.tsx
+pnpm --filter @react-rehab/web test src/missions/validated-modal-form/Exercise.test.tsx
 ```
 
 ## 테스트가 검증하는 동작

@@ -1,17 +1,22 @@
+import { getMissionBundle, type Locale } from "@react-rehab/missions";
 import { useMemo, useState } from "react";
-import { missions } from "./missions/registry";
+import { getMissions } from "./missions/registry";
 
 export default function App() {
+  const [locale, setLocale] = useState<Locale>("en");
+  const bundle = getMissionBundle(locale);
+  const copy = bundle.app;
+  const missions = useMemo(() => getMissions(locale), [locale]);
   const [selectedId, setSelectedId] = useState(missions[0]?.id ?? "");
   const [reviewedIds, setReviewedIds] = useState<string[]>([]);
 
   const selectedMission = useMemo(
     () => missions.find((mission) => mission.id === selectedId) ?? missions[0],
-    [selectedId]
+    [missions, selectedId]
   );
 
   if (!selectedMission) {
-    return <main className="empty-app">No missions configured.</main>;
+    return <main className="empty-app">{copy.noMissions}</main>;
   }
 
   const Exercise = selectedMission.Exercise;
@@ -27,15 +32,29 @@ export default function App() {
     <div className="app-shell">
       <aside className="sidebar">
         <div className="sidebar-heading">
-          <p className="eyebrow">React Rehab</p>
-          <h1>Mission Runner</h1>
-          <p>
-            Work through focused React missions, verify behavior, then reflect
-            before moving on.
-          </p>
+          <p className="eyebrow">{copy.appEyebrow}</p>
+          <h1>{copy.appTitle}</h1>
+          <p>{copy.appSummary}</p>
         </div>
 
-        <nav aria-label="Missions" className="mission-nav">
+        <div className="language-switcher" aria-label={copy.languageLabel}>
+          <button
+            aria-pressed={locale === "en"}
+            onClick={() => setLocale("en")}
+            type="button"
+          >
+            {copy.english}
+          </button>
+          <button
+            aria-pressed={locale === "ko"}
+            onClick={() => setLocale("ko")}
+            type="button"
+          >
+            {copy.korean}
+          </button>
+        </div>
+
+        <nav aria-label={copy.navLabel} className="mission-nav">
           {missions.map((mission, index) => {
             const active = mission.id === selectedMission.id;
             const isReviewed = reviewedIds.includes(mission.id);
@@ -53,7 +72,7 @@ export default function App() {
                 </span>
                 <span className="mission-button-copy">
                   <span>{mission.title}</span>
-                  <span>{isReviewed ? "Reviewed" : mission.summary}</span>
+                  <span>{isReviewed ? copy.reviewed : mission.summary}</span>
                 </span>
               </button>
             );
@@ -61,14 +80,14 @@ export default function App() {
         </nav>
 
         <p className="progress">
-          {reviewedIds.length} / {missions.length} reviewed
+          {reviewedIds.length} / {missions.length} {copy.progressReviewed}
         </p>
       </aside>
 
       <main className="mission-panel">
         <section className="mission-header" aria-labelledby="mission-title">
           <div>
-            <p className="eyebrow">Current Mission</p>
+            <p className="eyebrow">{copy.currentMission}</p>
             <h2 id="mission-title">{selectedMission.title}</h2>
             <p>{selectedMission.summary}</p>
           </div>
@@ -78,17 +97,17 @@ export default function App() {
             onClick={markReviewed}
             type="button"
           >
-            {reviewed ? "Reviewed" : "Mark reviewed"}
+            {reviewed ? copy.reviewed : copy.markReviewed}
           </button>
         </section>
 
-        <section className="info-grid" aria-label="Mission details">
-          <InfoCard title="Requirements" items={selectedMission.requirements} />
+        <section className="info-grid" aria-label={copy.missionDetails}>
+          <InfoCard title={copy.requirements} items={selectedMission.requirements} />
           <InfoCard
-            title="Manual Verification"
+            title={copy.manualVerification}
             items={selectedMission.verification}
           />
-          <InfoCard title="Retrospective" locked={!reviewed}>
+          <InfoCard title={copy.retrospective} locked={!reviewed}>
             {reviewed ? (
               <ul>
                 {selectedMission.retrospective.map((item) => (
@@ -97,26 +116,25 @@ export default function App() {
               </ul>
             ) : (
               <p>
-                Locked until you mark the mission reviewed after testing and
-                browser verification.
+                {copy.retrospectiveLocked}
               </p>
             )}
           </InfoCard>
         </section>
 
-        <section className="command-grid" aria-label="Mission workspace">
-          <InfoCard title="Test Command">
+        <section className="command-grid" aria-label={copy.missionWorkspace}>
+          <InfoCard title={copy.testCommand}>
             <code>{selectedMission.testCommand}</code>
           </InfoCard>
-          <InfoCard title="Target File">
+          <InfoCard title={copy.targetFile}>
             <code>{selectedMission.targetFile}</code>
           </InfoCard>
         </section>
 
         <section className="preview-panel" aria-labelledby="preview-title">
           <div className="preview-heading">
-            <p className="eyebrow">Live Preview</p>
-            <h3 id="preview-title">Exercise Surface</h3>
+            <p className="eyebrow">{copy.livePreview}</p>
+            <h3 id="preview-title">{copy.exerciseSurface}</h3>
           </div>
           <Exercise />
         </section>

@@ -9,12 +9,14 @@ Use this skill when the user asks for mission evaluation, review, grading, or fe
 
 ## Workflow
 
-1. Identify the mission folder under `src/missions`.
-2. Read that mission's `mission.ts` and `Exercise.test.tsx`.
-3. Read the user's `Exercise.tsx`.
-4. Run the specific test file.
-5. If the mission is UI-heavy, run the app and inspect behavior in the browser.
-6. Return findings first, ordered by severity.
+1. Identify the mission folder under `apps/web/src/missions`.
+2. Read that mission's detailed requirements from `docs/missions/en` or `docs/missions/ko`.
+3. Read localized mission metadata from `packages/missions/src/locales` when app copy matters.
+4. Read that mission's `Exercise.test.tsx`.
+5. Read the user's `Exercise.tsx`.
+6. Run the specific test file with `pnpm --filter @react-rehab/web test src/missions/<mission>/Exercise.test.tsx`.
+7. If the mission is UI-heavy, run the app and inspect behavior in the browser.
+8. Return findings first, ordered by severity.
 
 ## Output Format
 

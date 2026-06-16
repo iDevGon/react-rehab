@@ -6,8 +6,13 @@ settings:
 
 importers:
 
-  .:
+  .: {}
+
+  apps/web:
     dependencies:
+      '@react-rehab/missions':
+        specifier: workspace:*
+        version: link:../../packages/missions
       react:
         specifier: ^19.0.0
         version: 19.2.7
@@ -45,6 +50,8 @@ importers:
       vitest:
         specifier: ^3.0.0
         version: 3.2.6(jsdom@26.1.0)
+
+  packages/missions: {}
 
 packages:
 

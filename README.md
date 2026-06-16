@@ -1,5 +1,7 @@
 # React Rehab
 
+[한국어 README](./README.ko.md)
+
 React Rehab is a local practice app for rebuilding hands-on React coding
 fluency.
 
@@ -35,6 +37,18 @@ pnpm dev
 ```
 
 Open the URL printed by Vite, usually `http://localhost:5173`.
+
+## Monorepo Structure
+
+- `apps/web` contains the Vite React practice app.
+- `packages/missions` contains the default English mission content and Korean
+  translations used by the app.
+- `docs/missions/en` contains detailed English mission requirements.
+- `docs/missions/ko` contains detailed Korean mission requirements.
+- `.agents` contains the shared evaluator instructions for AI agents.
+
+The app opens in English by default. Use the language switcher in the sidebar to
+view the Korean version.
 
 ## Work A Mission
 

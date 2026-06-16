@@ -8,7 +8,7 @@ search text and category filter without mutating the original item data.
 
 ## Target File
 
-`src/missions/filterable-list/Exercise.tsx`
+`apps/web/src/missions/filterable-list/Exercise.tsx`
 
 ## What To Build
 
@@ -51,7 +51,7 @@ and render an empty state when nothing matches.
 ## Test Command
 
 ```bash
-pnpm test -- src/missions/filterable-list/Exercise.test.tsx
+pnpm --filter @react-rehab/web test src/missions/filterable-list/Exercise.test.tsx
 ```
 
 ## What The Tests Check

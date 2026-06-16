@@ -2,6 +2,12 @@
 
 This repository is a React practice environment for rebuilding hands-on coding fluency.
 
+The workspace is a pnpm monorepo:
+
+- `apps/web` is the React app.
+- `packages/missions` stores localized mission metadata.
+- `docs/missions/en` and `docs/missions/ko` store detailed mission requirements.
+
 ## Core Rule
 
 Do not solve mission implementation for the user unless they explicitly ask for solution code after evaluation.

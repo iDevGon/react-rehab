@@ -8,7 +8,7 @@ rerunning when unrelated UI state changes.
 
 ## Target File
 
-`src/missions/performance-pass/Exercise.tsx`
+`apps/web/src/missions/performance-pass/Exercise.tsx`
 
 ## What To Build
 
@@ -48,7 +48,7 @@ stabilizing the expensive work.
 ## Test Command
 
 ```bash
-pnpm test -- src/missions/performance-pass/Exercise.test.tsx
+pnpm --filter @react-rehab/web test src/missions/performance-pass/Exercise.test.tsx
 ```
 
 ## What The Tests Check

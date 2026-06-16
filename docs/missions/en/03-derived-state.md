@@ -8,7 +8,7 @@ can be calculated from existing rows.
 
 ## Target File
 
-`src/missions/derived-state/Exercise.tsx`
+`apps/web/src/missions/derived-state/Exercise.tsx`
 
 ## What To Build
 
@@ -48,7 +48,7 @@ items.
 ## Test Command
 
 ```bash
-pnpm test -- src/missions/derived-state/Exercise.test.tsx
+pnpm --filter @react-rehab/web test src/missions/derived-state/Exercise.test.tsx
 ```
 
 ## What The Tests Check

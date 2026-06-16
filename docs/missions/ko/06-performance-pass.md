@@ -8,7 +8,7 @@
 
 ## 대상 파일
 
-`src/missions/performance-pass/Exercise.tsx`
+`apps/web/src/missions/performance-pass/Exercise.tsx`
 
 ## 구현할 내용
 
@@ -47,7 +47,7 @@ calculation이 반복됩니다. 동작은 그대로 유지하면서 expensive wo
 ## 테스트 명령
 
 ```bash
-pnpm test -- src/missions/performance-pass/Exercise.test.tsx
+pnpm --filter @react-rehab/web test src/missions/performance-pass/Exercise.test.tsx
 ```
 
 ## 테스트가 검증하는 동작

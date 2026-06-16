@@ -7,7 +7,7 @@ selection. This mission resembles a small internal tool or task board.
 
 ## Target File
 
-`src/missions/crud-board/Exercise.tsx`
+`apps/web/src/missions/crud-board/Exercise.tsx`
 
 ## What To Build
 
@@ -49,7 +49,7 @@ Your job is to wire the list, selected card id, and draft editing state.
 ## Test Command
 
 ```bash
-pnpm test -- src/missions/crud-board/Exercise.test.tsx
+pnpm --filter @react-rehab/web test src/missions/crud-board/Exercise.test.tsx
 ```
 
 ## What The Tests Check

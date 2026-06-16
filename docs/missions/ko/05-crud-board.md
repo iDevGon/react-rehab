@@ -7,7 +7,7 @@
 
 ## 대상 파일
 
-`src/missions/crud-board/Exercise.tsx`
+`apps/web/src/missions/crud-board/Exercise.tsx`
 
 ## 구현할 내용
 
@@ -49,7 +49,7 @@ card id, draft editing state를 연결하세요.
 ## 테스트 명령
 
 ```bash
-pnpm test -- src/missions/crud-board/Exercise.test.tsx
+pnpm --filter @react-rehab/web test src/missions/crud-board/Exercise.test.tsx
 ```
 
 ## 테스트가 검증하는 동작

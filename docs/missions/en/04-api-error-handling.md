@@ -8,7 +8,7 @@ component.
 
 ## Target File
 
-`src/missions/api-error-handling/Exercise.tsx`
+`apps/web/src/missions/api-error-handling/Exercise.tsx`
 
 ## What To Build
 
@@ -50,7 +50,7 @@ model the async state clearly and render the correct UI for each phase.
 ## Test Command
 
 ```bash
-pnpm test -- src/missions/api-error-handling/Exercise.test.tsx
+pnpm --filter @react-rehab/web test src/missions/api-error-handling/Exercise.test.tsx
 ```
 
 ## What The Tests Check
