@@ -18,7 +18,7 @@ solution first.
 Clone the repository:
 
 ```bash
-git clone git@github.com:iDevGon/react-rehab.git
+git clone https://github.com/iDevGon/react-rehab.git
 cd react-rehab
 ```
 
