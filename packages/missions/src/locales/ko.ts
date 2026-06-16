@@ -54,26 +54,30 @@ export const ko: MissionLocaleBundle = {
     {
       id: "validated-modal-form",
       title: "검증이 있는 모달 폼",
-      summary: "모달을 열고, 입력을 검증하고, 제출 데이터를 저장합니다.",
+      summary: "여러 필드를 검증하는 연락처 초대 모달을 구현합니다.",
       targetFile: "apps/web/src/missions/validated-modal-form/Exercise.tsx",
       requirements: [
         "Add contact 버튼으로 모달 열기",
         "Escape 키로 모달 닫기",
-        "필수 값이 없으면 검증 에러 보여주기",
-        "성공적으로 제출한 연락처 렌더링하기"
+        "name, email, role, start date, invitation consent 검증하기",
+        "이미 저장된 email 중복 거부하기",
+        "수정한 필드가 유효해지면 해당 필드 error만 제거하기",
+        "name, email, role, start date를 포함한 연락처 렌더링하기"
       ],
       testCommand:
         "pnpm --filter @react-rehab/web test src/missions/validated-modal-form/Exercise.test.tsx",
       verification: [
         "Add contact를 누르면 dialog가 열립니다",
         "Escape는 저장 없이 dialog를 닫습니다",
-        "빈 제출은 필드별 에러를 보여줍니다",
-        "유효한 제출은 연락처를 추가하고 dialog를 닫습니다"
+        "빈 제출은 모든 required-field error를 보여줍니다",
+        "잘못된 name, email, 과거 날짜는 구체적인 error를 보여줍니다",
+        "중복 email은 dialog를 닫지 않고 error를 보여줍니다",
+        "유효한 제출은 전체 연락처를 추가하고 dialog를 닫습니다"
       ],
       retrospective: [
         "임시 form state와 저장된 연락처 데이터를 분리합니다",
-        "저장 목록을 변경하기 전에 검증합니다",
-        "키보드 닫기도 모달 상태 관리에 포함합니다"
+        "현재 form 값과 저장된 연락처에서 validation을 파생합니다",
+        "field-level error는 원인이 된 필드에만 한정합니다"
       ]
     },
     {

@@ -54,26 +54,30 @@ export const en: MissionLocaleBundle = {
     {
       id: "validated-modal-form",
       title: "Validated Modal Form",
-      summary: "Open a modal, validate input, and save submitted data.",
+      summary: "Build a contact invitation modal with multi-field validation.",
       targetFile: "apps/web/src/missions/validated-modal-form/Exercise.tsx",
       requirements: [
         "Open the modal from the Add contact button",
         "Close the modal with Escape",
-        "Show validation errors for missing required fields",
-        "Render a successfully submitted contact"
+        "Validate name, email, role, start date, and invitation consent",
+        "Reject duplicate saved emails",
+        "Clear only the edited field's error when it becomes valid",
+        "Render a saved contact with name, email, role, and start date"
       ],
       testCommand:
         "pnpm --filter @react-rehab/web test src/missions/validated-modal-form/Exercise.test.tsx",
       verification: [
         "Add contact opens a dialog",
         "Escape closes the dialog without saving",
-        "Empty submit shows field-level errors",
-        "Valid submit adds the contact and closes the dialog"
+        "Empty submit shows every required-field error",
+        "Invalid name, email, and past date show specific errors",
+        "Duplicate email keeps the dialog open with an error",
+        "Valid submit adds the full contact and closes the dialog"
       ],
       retrospective: [
         "Separate transient form state from saved contact data",
-        "Validate before mutating the saved list",
-        "Use keyboard dismissal as part of modal state management"
+        "Derive validation from current form values and saved contacts",
+        "Keep field-level errors scoped to the field that caused them"
       ]
     },
     {
