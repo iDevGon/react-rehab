@@ -106,10 +106,11 @@ export const ko: MissionLocaleBundle = {
     {
       id: "api-error-handling",
       title: "API 에러 핸들링",
-      summary: "loading, success, failure, retry, error clearing을 처리합니다.",
+      summary: "MSW API의 loading, success, failure, retry, error clearing을 처리합니다.",
       targetFile: "apps/web/src/missions/api-error-handling/Exercise.tsx",
       requirements: [
-        "mock request가 pending일 때 loading 보여주기",
+        "loader에서 GET /api/profile 호출하기",
+        "API request가 pending일 때 loading 보여주기",
         "성공 후 profile data 렌더링하기",
         "실패 후 error 렌더링하기",
         "실패한 request 재시도하기",
@@ -119,7 +120,7 @@ export const ko: MissionLocaleBundle = {
         "pnpm --filter @react-rehab/web test src/missions/api-error-handling/Exercise.test.tsx",
       verification: [
         "Load profile이 loading state로 진입합니다",
-        "성공한 request가 profile을 렌더링합니다",
+        "성공한 request가 name, email, project를 렌더링합니다",
         "실패한 request가 접근 가능한 error를 렌더링합니다",
         "Retry로 회복하고 이전 error를 지웁니다"
       ],

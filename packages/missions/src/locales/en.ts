@@ -106,10 +106,11 @@ export const en: MissionLocaleBundle = {
     {
       id: "api-error-handling",
       title: "API Error Handling",
-      summary: "Handle loading, success, failure, retry, and error clearing.",
+      summary: "Handle MSW API loading, success, failure, retry, and error clearing.",
       targetFile: "apps/web/src/missions/api-error-handling/Exercise.tsx",
       requirements: [
-        "Show loading while the mock request is pending",
+        "Call GET /api/profile from the loader",
+        "Show loading while the API request is pending",
         "Render profile data after success",
         "Render an error after failure",
         "Retry a failed request",
@@ -119,7 +120,7 @@ export const en: MissionLocaleBundle = {
         "pnpm --filter @react-rehab/web test src/missions/api-error-handling/Exercise.test.tsx",
       verification: [
         "Load profile enters a loading state",
-        "Successful requests render the profile",
+        "Successful requests render name, email, and project",
         "Failed requests render an accessible error",
         "Retry can recover and clears the old error"
       ],

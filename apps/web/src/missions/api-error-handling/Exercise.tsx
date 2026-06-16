@@ -2,20 +2,19 @@ import { useState } from "react";
 
 type Profile = {
   email: string;
+  id: string;
   name: string;
+  project: string;
 };
 
-function requestProfile(shouldFail: boolean): Promise<Profile> {
-  return new Promise((resolve, reject) => {
-    window.setTimeout(() => {
-      if (shouldFail) {
-        reject(new Error("Request failed"));
-        return;
-      }
+async function requestProfile(shouldFail: boolean): Promise<Profile> {
+  const response = await fetch(`/api/profile${shouldFail ? "?fail=true" : ""}`);
 
-      resolve({ email: "ada@example.com", name: "Ada Lovelace" });
-    }, 100);
-  });
+  if (!response.ok) {
+    throw new Error("Could not load profile");
+  }
+
+  return response.json() as Promise<Profile>;
 }
 
 export default function Exercise() {

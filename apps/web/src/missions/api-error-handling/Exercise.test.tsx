@@ -1,7 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { describe, expect, test } from "vitest";
+import { afterEach, describe, expect, test, vi } from "vitest";
 import Exercise from "./Exercise";
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
 
 describe("api-error-handling mission", () => {
   test("shows a loading state while fetching", async () => {
@@ -14,6 +18,17 @@ describe("api-error-handling mission", () => {
     expect(screen.getByRole("status")).toHaveTextContent(/loading profile/i);
   });
 
+  test("requests the profile API endpoint", async () => {
+    const user = userEvent.setup();
+    const fetchSpy = vi.spyOn(window, "fetch");
+
+    render(<Exercise />);
+
+    await user.click(screen.getByRole("button", { name: /load profile/i }));
+
+    expect(fetchSpy).toHaveBeenCalledWith("/api/profile");
+  });
+
   test("renders data after a successful request", async () => {
     const user = userEvent.setup();
 
@@ -23,6 +38,7 @@ describe("api-error-handling mission", () => {
 
     expect(await screen.findByText("Ada Lovelace", undefined, { timeout: 300 })).toBeInTheDocument();
     expect(screen.getByText("ada@example.com")).toBeInTheDocument();
+    expect(screen.getByText("analytical-engine")).toBeInTheDocument();
   });
 
   test("shows an error and retries successfully", async () => {
