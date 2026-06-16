@@ -30,8 +30,8 @@
   --space-lg: 1.5rem;
   --space-xl: 2rem;
   --space-2xl: 3rem;
-  --shadow-cut: 0 1px 0 oklch(100% 0 0 / 0.78) inset,
-    0 18px 48px oklch(24% 0.04 246 / 0.1);
+  --shadow-cut:
+    0 1px 0 oklch(100% 0 0 / 0.78) inset, 0 18px 48px oklch(24% 0.04 246 / 0.1);
 }
 
 * {
@@ -200,6 +200,15 @@ li {
   border-radius: var(--radius-md);
   background: oklch(12% 0.032 246 / 0.42);
   padding: 0.35rem;
+}
+
+.language-switcher legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
 }
 
 .language-switcher button {
@@ -384,14 +393,13 @@ li {
 }
 
 .info-card.locked {
-  background:
-    repeating-linear-gradient(
-      -45deg,
-      oklch(94% 0.014 238),
-      oklch(94% 0.014 238) 10px,
-      oklch(91% 0.018 238) 10px,
-      oklch(91% 0.018 238) 20px
-    );
+  background: repeating-linear-gradient(
+    -45deg,
+    oklch(94% 0.014 238),
+    oklch(94% 0.014 238) 10px,
+    oklch(91% 0.018 238) 10px,
+    oklch(91% 0.018 238) 20px
+  );
 }
 
 .info-card h3,

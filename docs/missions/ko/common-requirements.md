@@ -51,6 +51,24 @@ pnpm --filter @react-rehab/web add -D <package-name>
 - 추상화를 먼저 만들기보다 작고 명시적인 state를 선호하세요.
 - 작업 중에는 앱에 표시된 미션별 테스트 명령을 실행하세요.
 
+## 포맷팅과 린트
+
+레포는 formatting, linting, import 정리를 위한 품질 보조 도구로 Biome을
+제공합니다.
+
+자주 쓰는 명령:
+
+```bash
+pnpm lint
+pnpm format
+pnpm check
+pnpm check:write
+```
+
+작업 중 이 명령들을 사용해도 되지만, 자동 수정이 미션 요구사항을 대신하지는
+않습니다. `pnpm format:write` 또는 `pnpm check:write` 같은 write 명령을
+실행했다면 기본 미션 테스트 파일이 변경되지 않았는지 확인하세요.
+
 ## 디자인 정책
 
 미션 평가는 기본적으로 시각 디자인을 채점하지 않습니다. 행동 요구사항을

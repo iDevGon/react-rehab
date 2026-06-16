@@ -48,7 +48,9 @@ export default function Exercise() {
       </button>
 
       <p>Density: {dense ? "Compact" : "Comfortable"}</p>
-      <p aria-label="Calculation runs">{calculationRuns}</p>
+      <p role="status" aria-label="Calculation runs">
+        {calculationRuns}
+      </p>
 
       <ul aria-label="Projects">
         {visibleProjects.map((project) => (

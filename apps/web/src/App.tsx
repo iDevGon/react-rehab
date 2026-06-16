@@ -37,7 +37,8 @@ export default function App() {
           <p>{copy.appSummary}</p>
         </div>
 
-        <div className="language-switcher" aria-label={copy.languageLabel}>
+        <fieldset className="language-switcher">
+          <legend>{copy.languageLabel}</legend>
           <button
             aria-pressed={locale === "en"}
             onClick={() => setLocale("en")}
@@ -52,7 +53,7 @@ export default function App() {
           >
             {copy.korean}
           </button>
-        </div>
+        </fieldset>
 
         <nav aria-label={copy.navLabel} className="mission-nav">
           {missions.map((mission, index) => {
@@ -102,7 +103,10 @@ export default function App() {
         </section>
 
         <section className="info-grid" aria-label={copy.missionDetails}>
-          <InfoCard title={copy.requirements} items={selectedMission.requirements} />
+          <InfoCard
+            title={copy.requirements}
+            items={selectedMission.requirements}
+          />
           <InfoCard
             title={copy.manualVerification}
             items={selectedMission.verification}
@@ -115,9 +119,7 @@ export default function App() {
                 ))}
               </ul>
             ) : (
-              <p>
-                {copy.retrospectiveLocked}
-              </p>
+              <p>{copy.retrospectiveLocked}</p>
             )}
           </InfoCard>
         </section>

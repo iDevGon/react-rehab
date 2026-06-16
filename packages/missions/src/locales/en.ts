@@ -91,7 +91,8 @@ export const en: MissionLocaleBundle = {
         "Track selected rows and derive selected count",
         "Update derived values when quantities change"
       ],
-      testCommand: "pnpm --filter @react-rehab/web test src/missions/derived-state/Exercise.test.tsx",
+      testCommand:
+        "pnpm --filter @react-rehab/web test src/missions/derived-state/Exercise.test.tsx",
       verification: [
         "Initial totals match the cart rows",
         "Checking rows updates selected count",
@@ -106,7 +107,8 @@ export const en: MissionLocaleBundle = {
     {
       id: "api-error-handling",
       title: "API Error Handling",
-      summary: "Handle MSW API loading, success, failure, retry, and error clearing.",
+      summary:
+        "Handle MSW API loading, success, failure, retry, and error clearing.",
       targetFile: "apps/web/src/missions/api-error-handling/Exercise.tsx",
       requirements: [
         "Call GET /api/profile from the loader",
@@ -142,7 +144,8 @@ export const en: MissionLocaleBundle = {
         "Delete the selected card",
         "Clear selection without deleting"
       ],
-      testCommand: "pnpm --filter @react-rehab/web test src/missions/crud-board/Exercise.test.tsx",
+      testCommand:
+        "pnpm --filter @react-rehab/web test src/missions/crud-board/Exercise.test.tsx",
       verification: [
         "Adding creates a visible card",
         "Selecting a card fills the editor",

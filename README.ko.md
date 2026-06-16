@@ -67,10 +67,22 @@ Vite가 출력하는 URL을 엽니다. 보통 `http://localhost:5173` 입니다.
 자주 쓰는 명령:
 
 ```bash
+pnpm lint
+pnpm format
 pnpm typecheck
 pnpm build
 pnpm test
 ```
+
+Biome으로 레포 전체 lint와 formatting을 확인할 수 있습니다:
+
+```bash
+pnpm check
+pnpm check:write
+```
+
+`pnpm check:write`는 파일을 수정할 수 있습니다. 미션을 푸는 중에는 기본 미션
+테스트 파일이 변경되지 않았는지 확인하세요.
 
 ## 에이전트 평가
 

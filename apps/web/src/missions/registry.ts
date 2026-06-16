@@ -1,10 +1,10 @@
 import { getMissionBundle, type Locale } from "@react-rehab/missions";
-import type { Mission } from "./types";
 import ApiErrorHandlingExercise from "./api-error-handling/Exercise";
 import CrudBoardExercise from "./crud-board/Exercise";
 import DerivedStateExercise from "./derived-state/Exercise";
 import FilterableListExercise from "./filterable-list/Exercise";
 import PerformancePassExercise from "./performance-pass/Exercise";
+import type { Mission } from "./types";
 import ValidatedModalFormExercise from "./validated-modal-form/Exercise";
 
 const exerciseByMissionId: Record<string, Mission["Exercise"]> = {

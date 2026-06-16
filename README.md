@@ -70,10 +70,22 @@ command shown in the app while you work.
 Useful commands:
 
 ```bash
+pnpm lint
+pnpm format
 pnpm typecheck
 pnpm build
 pnpm test
 ```
+
+Biome is available for repository-level linting and formatting:
+
+```bash
+pnpm check
+pnpm check:write
+```
+
+`pnpm check:write` can rewrite files. Do not use it to modify default mission
+test files while solving a mission.
 
 ## Agent Evaluation
 

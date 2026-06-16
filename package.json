@@ -7,8 +7,17 @@
   "scripts": {
     "dev": "pnpm --filter @react-rehab/web dev",
     "build": "pnpm --filter @react-rehab/web build",
+    "lint": "biome lint .",
+    "format": "biome format .",
+    "format:write": "biome format --write .",
+    "check": "biome check .",
+    "check:write": "biome check --write .",
+    "ci": "biome ci .",
     "test": "pnpm --filter @react-rehab/web test",
     "test:watch": "pnpm --filter @react-rehab/web test:watch",
     "typecheck": "pnpm --filter @react-rehab/web typecheck"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.0"
   }
 }

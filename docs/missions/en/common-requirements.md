@@ -56,6 +56,24 @@ Examples:
 - Prefer small, explicit state over speculative abstractions.
 - Run the mission-specific test command shown in the app while working.
 
+## Formatting And Linting
+
+The repository provides Biome as a quality helper for formatting, linting, and
+import organization.
+
+Useful commands:
+
+```bash
+pnpm lint
+pnpm format
+pnpm check
+pnpm check:write
+```
+
+You may use these commands while working, but automatic fixes do not replace the
+mission requirements. If you run a write command such as `pnpm format:write` or
+`pnpm check:write`, confirm that default mission test files were not changed.
+
 ## Design Policy
 
 Mission evaluation does not grade visual design by default. A solution can pass

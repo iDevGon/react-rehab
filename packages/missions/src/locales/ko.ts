@@ -91,7 +91,8 @@ export const ko: MissionLocaleBundle = {
         "선택된 row를 추적하고 selected count 계산하기",
         "수량 변경 시 파생 값 갱신하기"
       ],
-      testCommand: "pnpm --filter @react-rehab/web test src/missions/derived-state/Exercise.test.tsx",
+      testCommand:
+        "pnpm --filter @react-rehab/web test src/missions/derived-state/Exercise.test.tsx",
       verification: [
         "초기 합계가 cart row와 일치합니다",
         "row 체크 시 selected count가 갱신됩니다",
@@ -106,7 +107,8 @@ export const ko: MissionLocaleBundle = {
     {
       id: "api-error-handling",
       title: "API 에러 핸들링",
-      summary: "MSW API의 loading, success, failure, retry, error clearing을 처리합니다.",
+      summary:
+        "MSW API의 loading, success, failure, retry, error clearing을 처리합니다.",
       targetFile: "apps/web/src/missions/api-error-handling/Exercise.tsx",
       requirements: [
         "loader에서 GET /api/profile 호출하기",
@@ -142,7 +144,8 @@ export const ko: MissionLocaleBundle = {
         "선택한 카드 삭제하기",
         "삭제하지 않고 선택 해제하기"
       ],
-      testCommand: "pnpm --filter @react-rehab/web test src/missions/crud-board/Exercise.test.tsx",
+      testCommand:
+        "pnpm --filter @react-rehab/web test src/missions/crud-board/Exercise.test.tsx",
       verification: [
         "추가하면 보이는 카드가 생성됩니다",
         "카드를 선택하면 editor가 채워집니다",
