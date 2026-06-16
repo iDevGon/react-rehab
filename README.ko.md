@@ -76,4 +76,4 @@ pnpm test
 
 AI 에이전트는 기본적으로 미션을 대신 풀지 않고 사용자의 시도를 평가해야
 합니다. 공통 평가 지침은 `.agents/AGENTS.md`, 재사용 가능한 스킬은
-`.agents/skills/react-rehab-evaluator/SKILL.md`에 있습니다.
+`.agents/skills/rehab-eval/SKILL.md`에 있습니다.

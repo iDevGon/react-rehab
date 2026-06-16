@@ -30,7 +30,7 @@ Create or modify these files:
 - Create: `src/missions/<mission>/Exercise.tsx` - intentionally incomplete starter code per mission.
 - Create: `src/missions/<mission>/Exercise.test.tsx` - failing tests per mission.
 - Create: `.agents/AGENTS.md` - shared AI evaluator instructions.
-- Create: `.agents/skills/react-rehab-evaluator/SKILL.md` - reusable evaluation skill.
+- Create: `.agents/skills/rehab-eval/SKILL.md` - reusable evaluation skill.
 - Create symlink: `.claude -> .agents`.
 - Create directory: `.codex`.
 - Create symlink: `.codex/CLAUDE.md -> ../.agents/AGENTS.md`.
@@ -224,7 +224,7 @@ git commit -m "chore: scaffold react rehab app"
 **Files:**
 - Modify: `AGENTS.md`
 - Create: `.agents/AGENTS.md`
-- Create: `.agents/skills/react-rehab-evaluator/SKILL.md`
+- Create: `.agents/skills/rehab-eval/SKILL.md`
 - Create symlink: `.claude -> .agents`
 - Create directory: `.codex`
 - Create symlink: `.codex/CLAUDE.md -> ../.agents/AGENTS.md`
@@ -295,7 +295,7 @@ You are evaluating a user's React practice work. The purpose of this repository 
 
 ```md
 ---
-name: react-rehab-evaluator
+name: rehab-eval
 description: Evaluate React Rehab mission attempts without solving them for the user.
 ---
 
@@ -335,7 +335,7 @@ Do not provide a full replacement implementation unless the user explicitly asks
 Run:
 
 ```bash
-mkdir -p .agents/skills/react-rehab-evaluator .codex
+mkdir -p .agents/skills/rehab-eval .codex
 ln -s .agents .claude
 ln -s ../.agents/AGENTS.md .codex/CLAUDE.md
 ```
@@ -350,7 +350,7 @@ test -L .codex/CLAUDE.md
 - [ ] **Step 5: Commit agent instructions**
 
 ```bash
-git add AGENTS.md .agents/AGENTS.md .agents/skills/react-rehab-evaluator/SKILL.md .claude .codex/CLAUDE.md
+git add AGENTS.md .agents/AGENTS.md .agents/skills/rehab-eval/SKILL.md .claude .codex/CLAUDE.md
 git commit -m "docs: add ai evaluation instructions"
 ```
 
@@ -697,7 +697,7 @@ pnpm dev
 
 ## Agent Evaluation
 
-AI agents should evaluate attempts, not solve missions by default. Shared evaluator instructions live in `.agents/AGENTS.md`, and the reusable skill lives in `.agents/skills/react-rehab-evaluator/SKILL.md`.
+AI agents should evaluate attempts, not solve missions by default. Shared evaluator instructions live in `.agents/AGENTS.md`, and the reusable skill lives in `.agents/skills/rehab-eval/SKILL.md`.
 ```
 
 - [ ] **Step 2: Verify commands**

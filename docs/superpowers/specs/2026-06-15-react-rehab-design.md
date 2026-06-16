@@ -125,7 +125,7 @@ AGENTS.md
 .agents/
   AGENTS.md
   skills/
-    react-rehab-evaluator/
+    rehab-eval/
       SKILL.md
 .claude -> .agents
 .codex/
@@ -142,7 +142,7 @@ AGENTS.md
 - provide feedback without dumping full answer code
 - prefer questions, observations, and targeted review comments over direct implementation
 
-`.agents/skills/react-rehab-evaluator/SKILL.md` defines the evaluation workflow:
+`.agents/skills/rehab-eval/SKILL.md` defines the evaluation workflow:
 
 1. Identify the mission being evaluated.
 2. Read the mission requirements and tests.

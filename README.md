@@ -79,4 +79,4 @@ pnpm test
 
 AI agents should evaluate attempts, not solve missions by default. Shared
 evaluator instructions live in `.agents/AGENTS.md`, and the reusable skill lives
-in `.agents/skills/react-rehab-evaluator/SKILL.md`.
+in `.agents/skills/rehab-eval/SKILL.md`.

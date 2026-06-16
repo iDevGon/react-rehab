@@ -1,9 +1,9 @@
 ---
-name: react-rehab-evaluator
+name: rehab-eval
 description: Evaluate React Rehab mission attempts without solving them for the user.
 ---
 
-# React Rehab Evaluator
+# Rehab Eval
 
 Use this skill when the user asks for mission evaluation, review, grading, or feedback.
 
