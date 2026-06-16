@@ -1,0 +1,14 @@
+{
+  "name": "react-rehab-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.32.1",
+  "scripts": {
+    "dev": "pnpm --filter @react-rehab/web dev",
+    "build": "pnpm --filter @react-rehab/web build",
+    "test": "pnpm --filter @react-rehab/web test",
+    "test:watch": "pnpm --filter @react-rehab/web test:watch",
+    "typecheck": "pnpm --filter @react-rehab/web typecheck"
+  }
+}
