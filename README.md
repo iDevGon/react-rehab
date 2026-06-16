@@ -1,18 +1,40 @@
 # React Rehab
 
-React Rehab is a local practice app for rebuilding hands-on React coding fluency.
+React Rehab is a local practice app for rebuilding hands-on React coding
+fluency.
 
-## Install
+This project is for developers who have become comfortable delegating too much
+implementation work to AI agents and want to practice writing React code by
+hand again. The app gives you small, realistic React missions with requirements,
+manual verification steps, and failing tests. Your job is to open the target
+`Exercise.tsx` file and make the mission pass yourself.
+
+AI agents are meant to be reviewers here, not replacement implementers. Use them
+to evaluate your attempt after you have written code, not to generate the
+solution first.
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone git@github.com:iDevGon/react-rehab.git
+cd react-rehab
+```
+
+Install dependencies with pnpm:
 
 ```bash
 pnpm install
 ```
 
-## Run The App
+Run the local app:
 
 ```bash
 pnpm dev
 ```
+
+Open the URL printed by Vite, usually `http://localhost:5173`.
 
 ## Work A Mission
 
@@ -24,6 +46,20 @@ pnpm dev
 6. Verify the behavior in the browser.
 7. Mark the mission reviewed to unlock the retrospective.
 
+The full test suite intentionally fails at first because the mission starters
+are incomplete. That is the point of the project. Run the mission-specific test
+command shown in the app while you work.
+
+Useful commands:
+
+```bash
+pnpm typecheck
+pnpm build
+pnpm test
+```
+
 ## Agent Evaluation
 
-AI agents should evaluate attempts, not solve missions by default. Shared evaluator instructions live in `.agents/AGENTS.md`, and the reusable skill lives in `.agents/skills/react-rehab-evaluator/SKILL.md`.
+AI agents should evaluate attempts, not solve missions by default. Shared
+evaluator instructions live in `.agents/AGENTS.md`, and the reusable skill lives
+in `.agents/skills/react-rehab-evaluator/SKILL.md`.
