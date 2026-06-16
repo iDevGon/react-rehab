@@ -5,13 +5,13 @@ React Rehab is a local practice app for rebuilding hands-on React coding fluency
 ## Install
 
 ```bash
-npm install
+pnpm install
 ```
 
 ## Run The App
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ## Work A Mission

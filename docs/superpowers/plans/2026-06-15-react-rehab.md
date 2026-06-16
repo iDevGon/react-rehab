@@ -196,18 +196,18 @@ import "@testing-library/jest-dom/vitest";
 Run:
 
 ```bash
-npm install
+pnpm install
 ```
 
-Expected: `package-lock.json` is created and dependencies install successfully.
+Expected: `pnpm-lock.yaml` is created and dependencies install successfully.
 
 - [ ] **Step 3: Verify scaffold**
 
 Run:
 
 ```bash
-npm run typecheck
-npm test
+pnpm typecheck
+pnpm test
 ```
 
 Expected: typecheck passes. Test command may report no tests yet; after Task 4 it must run real tests.
@@ -215,7 +215,7 @@ Expected: typecheck passes. Test command may report no tests yet; after Task 4 i
 - [ ] **Step 4: Commit scaffold**
 
 ```bash
-git add .gitignore index.html package.json package-lock.json tsconfig.json tsconfig.node.json vite.config.ts src/main.tsx src/test/setup.ts
+git add .gitignore index.html package.json pnpm-lock.yaml tsconfig.json tsconfig.node.json vite.config.ts src/main.tsx src/test/setup.ts
 git commit -m "chore: scaffold react rehab app"
 ```
 
@@ -250,10 +250,10 @@ Do not solve mission implementation for the user unless they explicitly ask for 
 
 ## Project Commands
 
-- `npm run dev` starts the app.
-- `npm test` runs all mission tests.
-- `npm run typecheck` checks TypeScript.
-- `npm run build` verifies production build.
+- `pnpm dev` starts the app.
+- `pnpm test` runs all mission tests.
+- `pnpm typecheck` checks TypeScript.
+- `pnpm build` verifies production build.
 ```
 
 - [ ] **Step 2: Create `.agents/AGENTS.md`**
@@ -404,7 +404,7 @@ export const missions: Mission[] = [
     summary: "Search, filter, and render an empty state.",
     targetFile: "src/missions/filterable-list/Exercise.tsx",
     requirements: ["Search items by name", "Filter by category", "Show an empty state"],
-    testCommand: "npm test -- src/missions/filterable-list/Exercise.test.tsx",
+    testCommand: "pnpm test -- src/missions/filterable-list/Exercise.test.tsx",
     verification: ["Search changes visible results", "Category filter narrows results", "No matches shows empty state"],
     retrospective: ["Keep source data unchanged", "Derive visible items during render"],
     Exercise: PlaceholderExercise
@@ -532,8 +532,8 @@ Create `src/App.css` with responsive two-pane layout, 8px radius cards, readable
 Run:
 
 ```bash
-npm run typecheck
-npm run build
+pnpm typecheck
+pnpm build
 ```
 
 Expected: both commands pass.
@@ -558,7 +558,7 @@ Create a starter component with static data and missing search/filter behavior. 
 Run:
 
 ```bash
-npm test -- src/missions/filterable-list/Exercise.test.tsx
+pnpm test -- src/missions/filterable-list/Exercise.test.tsx
 ```
 
 Expected before solving: test fails because filtering is incomplete.
@@ -570,7 +570,7 @@ Create a starter component with an "Add contact" button and incomplete modal/for
 Run:
 
 ```bash
-npm test -- src/missions/validated-modal-form/Exercise.test.tsx
+pnpm test -- src/missions/validated-modal-form/Exercise.test.tsx
 ```
 
 Expected before solving: test fails because modal and validation behavior are incomplete.
@@ -582,7 +582,7 @@ Create a starter cart-like component where source items exist but totals and sel
 Run:
 
 ```bash
-npm test -- src/missions/derived-state/Exercise.test.tsx
+pnpm test -- src/missions/derived-state/Exercise.test.tsx
 ```
 
 Expected before solving: test fails because derived values are incomplete.
@@ -594,7 +594,7 @@ Create a starter component with a mock request helper and incomplete loading/err
 Run:
 
 ```bash
-npm test -- src/missions/api-error-handling/Exercise.test.tsx
+pnpm test -- src/missions/api-error-handling/Exercise.test.tsx
 ```
 
 Expected before solving: test fails because async states are incomplete.
@@ -606,7 +606,7 @@ Create a starter board with incomplete create, edit, delete, and selection behav
 Run:
 
 ```bash
-npm test -- src/missions/crud-board/Exercise.test.tsx
+pnpm test -- src/missions/crud-board/Exercise.test.tsx
 ```
 
 Expected before solving: test fails because CRUD behavior is incomplete.
@@ -618,7 +618,7 @@ Create a starter component with an intentionally slow derived calculation and av
 Run:
 
 ```bash
-npm test -- src/missions/performance-pass/Exercise.test.tsx
+pnpm test -- src/missions/performance-pass/Exercise.test.tsx
 ```
 
 Expected before solving: behavior or performance expectation fails until the user improves memoization/state placement.
@@ -639,7 +639,7 @@ Expected before solving: behavior or performance expectation fails until the use
 Run:
 
 ```bash
-npm test
+pnpm test
 ```
 
 Expected: mission tests fail because the starter exercises are intentionally incomplete. TypeScript should still pass.
@@ -647,7 +647,7 @@ Expected: mission tests fail because the starter exercises are intentionally inc
 Run:
 
 ```bash
-npm run typecheck
+pnpm typecheck
 ```
 
 Expected: PASS.
@@ -676,13 +676,13 @@ React Rehab is a local practice app for rebuilding hands-on React coding fluency
 ## Install
 
 ```bash
-npm install
+pnpm install
 ```
 
 ## Run The App
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ## Work A Mission
@@ -705,8 +705,8 @@ AI agents should evaluate attempts, not solve missions by default. Shared evalua
 Run:
 
 ```bash
-npm run typecheck
-npm run build
+pnpm typecheck
+pnpm build
 ```
 
 Expected: both pass.
@@ -714,7 +714,7 @@ Expected: both pass.
 Run:
 
 ```bash
-npm test
+pnpm test
 ```
 
 Expected: tests fail while exercises are unsolved. Confirm failures are mission-behavior failures, not TypeScript errors, import errors, or test setup errors.
@@ -724,7 +724,7 @@ Expected: tests fail while exercises are unsolved. Confirm failures are mission-
 Run:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 Expected: Vite prints a local URL. Open it and verify:

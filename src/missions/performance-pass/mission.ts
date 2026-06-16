@@ -10,7 +10,7 @@ export const mission: Omit<Mission, "Exercise"> = {
     "Avoid repeating expensive filtering for unrelated state changes",
     "Expose calculation count so improvements can be verified"
   ],
-  testCommand: "npm test -- src/missions/performance-pass/Exercise.test.tsx",
+  testCommand: "pnpm test -- src/missions/performance-pass/Exercise.test.tsx",
   verification: [
     "Filtering still changes the visible projects",
     "Toggling unrelated UI state does not rerun filtering",

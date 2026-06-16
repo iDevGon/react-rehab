@@ -11,7 +11,7 @@ export const mission: Omit<Mission, "Exercise"> = {
     "Track selected rows and derive selected count",
     "Update derived values when quantities change"
   ],
-  testCommand: "npm test -- src/missions/derived-state/Exercise.test.tsx",
+  testCommand: "pnpm test -- src/missions/derived-state/Exercise.test.tsx",
   verification: [
     "Initial totals match the cart rows",
     "Checking rows updates selected count",

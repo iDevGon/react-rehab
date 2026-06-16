@@ -12,7 +12,7 @@ export const mission: Omit<Mission, "Exercise"> = {
     "Delete the selected card",
     "Clear selection without deleting"
   ],
-  testCommand: "npm test -- src/missions/crud-board/Exercise.test.tsx",
+  testCommand: "pnpm test -- src/missions/crud-board/Exercise.test.tsx",
   verification: [
     "Adding creates a visible card",
     "Selecting a card fills the editor",

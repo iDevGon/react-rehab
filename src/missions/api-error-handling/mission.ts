@@ -12,7 +12,7 @@ export const mission: Omit<Mission, "Exercise"> = {
     "Retry a failed request",
     "Clear stale errors before a new request starts"
   ],
-  testCommand: "npm test -- src/missions/api-error-handling/Exercise.test.tsx",
+  testCommand: "pnpm test -- src/missions/api-error-handling/Exercise.test.tsx",
   verification: [
     "Load profile enters a loading state",
     "Successful requests render the profile",

@@ -16,7 +16,7 @@ Do not solve mission implementation for the user unless they explicitly ask for 
 
 ## Project Commands
 
-- `npm run dev` starts the app.
-- `npm test` runs all mission tests.
-- `npm run typecheck` checks TypeScript.
-- `npm run build` verifies production build.
+- `pnpm dev` starts the app.
+- `pnpm test` runs all mission tests.
+- `pnpm typecheck` checks TypeScript.
+- `pnpm build` verifies production build.

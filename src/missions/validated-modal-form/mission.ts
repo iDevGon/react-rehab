@@ -11,7 +11,7 @@ export const mission: Omit<Mission, "Exercise"> = {
     "Show validation errors for missing required fields",
     "Render a successfully submitted contact"
   ],
-  testCommand: "npm test -- src/missions/validated-modal-form/Exercise.test.tsx",
+  testCommand: "pnpm test -- src/missions/validated-modal-form/Exercise.test.tsx",
   verification: [
     "Add contact opens a dialog",
     "Escape closes the dialog without saving",

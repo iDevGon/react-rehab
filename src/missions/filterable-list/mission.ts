@@ -10,7 +10,7 @@ export const mission: Omit<Mission, "Exercise"> = {
     "Filter by category",
     "Show an empty state when no results match"
   ],
-  testCommand: "npm test -- src/missions/filterable-list/Exercise.test.tsx",
+  testCommand: "pnpm test -- src/missions/filterable-list/Exercise.test.tsx",
   verification: [
     "Typing in search narrows the visible results",
     "Choosing a category narrows the visible results",
