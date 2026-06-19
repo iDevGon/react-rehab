@@ -24,11 +24,13 @@ describe("formatMissionReport", () => {
         "",
         "Mission Test Results",
         "",
-        "| Mission | Requirement | Result |",
-        "| --- | --- | --- |",
-        "| Filterable List | searches items by name | ✅ PASS |",
-        "| Filterable List | shows an empty state when no items match | ❌ FAIL |",
-        "| Validated Modal Form | closes the modal with Escape | ⏭️ SKIP |",
+        "┌──────────────────────┬──────────────────────────────────────────┬─────────┐",
+        "│ Mission              │ Requirement                              │ Result  │",
+        "├──────────────────────┼──────────────────────────────────────────┼─────────┤",
+        "│ Filterable List      │ searches items by name                   │ ✅ PASS │",
+        "│ Filterable List      │ shows an empty state when no items match │ ❌ FAIL │",
+        "│ Validated Modal Form │ closes the modal with Escape             │ ⏭️ SKIP │",
+        "└──────────────────────┴──────────────────────────────────────────┴─────────┘",
         ""
       ].join("\n")
     );

@@ -21,24 +21,36 @@ const statusLabels: Record<MissionReportState, string> = {
 
 export function formatMissionReport(files: MissionReportFile[]): string {
   const rows = files.flatMap((file) =>
-    file.tests.map((test) => [
-      formatMissionName(file.filepath),
-      escapeCell(test.name),
-      statusLabels[test.state]
-    ])
+    file.tests.map((test) => ({
+      cells: [
+        formatMissionName(file.filepath),
+        normalizeCell(test.name),
+        statusLabels[test.state]
+      ]
+    }))
   );
 
   if (rows.length === 0) {
     return "";
   }
 
+  const headers = ["Mission", "Requirement", "Result"];
+  const widths = headers.map((header, index) =>
+    Math.max(
+      displayWidth(header),
+      ...rows.map((row) => displayWidth(row.cells[index]))
+    )
+  );
+
   return [
     "",
     "Mission Test Results",
     "",
-    "| Mission | Requirement | Result |",
-    "| --- | --- | --- |",
-    ...rows.map((row) => `| ${row.join(" | ")} |`),
+    makeRule("┌", "┬", "┐", widths),
+    makeRow(headers, widths),
+    makeRule("├", "┼", "┤", widths),
+    ...rows.map((row) => makeRow(row.cells, widths)),
+    makeRule("└", "┴", "┘", widths),
     ""
   ].join("\n");
 }
@@ -103,6 +115,43 @@ function formatMissionName(filepath: string): string {
     .join(" ");
 }
 
-function escapeCell(value: string): string {
-  return value.replace(/\|/g, "\\|");
+function makeRule(
+  left: string,
+  middle: string,
+  right: string,
+  widths: number[]
+) {
+  return `${left}${widths.map((width) => "─".repeat(width + 2)).join(middle)}${right}`;
+}
+
+function makeRow(cells: string[], widths: number[]) {
+  return `│ ${cells.map((cell, index) => padCell(cell, widths[index])).join(" │ ")} │`;
+}
+
+function padCell(value: string, width: number) {
+  return `${value}${" ".repeat(width - displayWidth(value))}`;
+}
+
+function displayWidth(value: string) {
+  let width = 0;
+
+  for (const char of value) {
+    if (char === "\uFE0F") {
+      continue;
+    }
+
+    width += isWideChar(char) ? 2 : 1;
+  }
+
+  return width;
+}
+
+function isWideChar(char: string) {
+  return /[\u1100-\u115F\u2329\u232A\u23E9-\u23F3\u23F8-\u23FA\u2600-\u27BF\u2E80-\uA4CF\uAC00-\uD7A3\uF900-\uFAFF\uFE10-\uFE19\uFE30-\uFE6F\uFF00-\uFF60\uFFE0-\uFFE6]/.test(
+    char
+  );
+}
+
+function normalizeCell(value: string): string {
+  return value.replace(/\s+/g, " ").trim();
 }
